@@ -12,6 +12,7 @@ module.exports = {
         }
     
         MongoClient.connect(config.db['connection-string'], function ( err, client) {
+            if (err) console.log("Did not connect to db: \n", err);
             _db = client.db('blog-db');
             if(!err) console.log('Connected to db');
             return callback(err);
