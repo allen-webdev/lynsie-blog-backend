@@ -1,4 +1,10 @@
-#!/usr/bin/env node
+#!/usr/start/env node
+
+/**
+ * Config file
+ */
+
+var config = require('../config.json');
 
 /**
  * Module dependencies.
@@ -7,7 +13,7 @@
 var app = require('../app');
 var debug = require('debug')('backend:server');
 var http = require('http');
-
+var dbInit = require('./mongoUtil').dbInit;
 /**
  * Get port from environment and store in Express.
  */
@@ -88,3 +94,11 @@ function onListening() {
     : 'port ' + addr.port;
   console.log('Listening on ' + bind);
 }
+
+/**
+ * Connect to Azure mongo-db
+ */
+dbInit(err => {
+  if (err) console.error(`Error connecting to db: \n${err}`);
+});
+

@@ -1,0 +1,5 @@
+{
+    "db": {
+        "connection-string":"mongodb://lysnsie-db:lEyorInuXtBM2pqnTrAot0w5g7imcqcw5Brm3j4drRC55d9IMasEpI4aMlJcr9r9od24Bo8zeP1pA1jfZ14tFQ%3D%3D@lysnsie-db.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@lysnsie-db@"
+    }
+}
